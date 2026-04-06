@@ -1,0 +1,328 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+@import url(...);
+
+/* THEN add */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    scroll-behavior: smooth;
+    /*color: #084f5a;*/
+    color: #F5A6A1;
+}
+
+/* ===== HEADER ===== */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    /*background: rgba(8, 79, 90, 0.95);*/
+    background: rgba(245, 166, 161, 1);
+    backdrop-filter: blur(8px);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.logo img {
+    height: 60px;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+nav a {
+    margin: 0 15px;
+    color: white;
+    text-decoration: none;
+    position: relative;
+}
+
+nav a::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    /*background: #c2edf7;*/
+    background: #FFF3F3;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+.contact-number {
+    font-size: 14px;
+}
+
+/* ===== HERO ===== */
+.hero {
+    height: 100vh;
+    /*background: linear-gradient(to right, #c2edf7, #88c3cf);*/
+    background: linear-gradient(to right, #FFF3F3, #FFE3E0);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 18px;
+}
+
+/* ===== SECTION ===== */
+.section {
+    padding: 50px 40px;
+    text-align: center;
+}
+
+ol,
+ul,
+menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    margin-bottom: 30px;
+}
+
+.gap-3 {
+    gap: .75rem;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.flex {
+    display: flex;
+}
+
+/* ===== SERVICES ===== */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.card {
+    /*background: #88c3cf;*/
+    background: #FFE3E0;
+    padding: 30px;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    /*background: #6099a5;*/
+    background: #F5BAB4;
+    color: white;
+}
+
+/* ===== GALLERY ===== */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+}
+
+.category {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.category img {
+    width: 100%;
+    display: block;
+    transition: 0.4s;
+}
+
+.category:hover img {
+    transform: scale(1.1);
+}
+
+.category h3 {
+    position: absolute;
+    bottom: 10px;
+    left: 15px;
+    color: white;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* ===== CONTACT ===== */
+.contact {
+    /*background: #084f5a;*/
+    background: #F5A6A1;
+    color: white;
+}
+
+.contact-number {
+    display: inline-block;
+    padding: 8px 18px;
+    border: 1px solid white;
+    border-radius: 999px;
+    color: white;
+    text-decoration: none;
+    background: transparent;
+    transition: all 0.25s ease-in-out;
+}
+
+.contact-number:hover {
+    background: #df1e68;
+    border-color: #df1e68;
+    /*border-color: #ff0062e3;*/
+    transform: scale(1.08);
+}
+
+/* ===== MOBILE ===== */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/*.map {
+  margin-top: 20px;
+  border-radius: 15px;
+  overflow: hidden;
+}*/
+
+.contact-container {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.contact-info {
+    flex: 1;
+    text-align: left;
+}
+
+.map {
+    flex: 1;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+@media (max-width: 768px) {
+
+    nav {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        /*background: #084f5a;*/
+        background: #F5A6A1;
+        display: none;
+        flex-direction: column;
+    }
+
+    nav a {
+        padding: 15px;
+        text-align: center;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    /*.contact-number {
+        display: none;
+    }*/
+
+    /*.contact-number {
+        text-decoration: none;
+        color: white;
+        /* or whatever color your navbar text is */
+    /*}
+
+    .contact-number:visited,
+    .contact-number:active,
+    .contact-number:hover {
+        color: white;
+        text-decoration: none;
+    }*/
+
+    /*.contact-number {
+        all: unset;
+        cursor: pointer;
+        color: white;
+    }*/
+    /*.contact-number {
+        text-decoration: none;
+        color: white;
+        position: relative;
+        transition: 0.3s ease;
+    }
+
+    /* Glow effect on hover */
+    /*.contact-number:hover {
+        color: #c2edf7;
+        text-shadow: 0 0 8px rgba(194, 237, 247, 0.8);
+    }*/
+
+    /*.contact-number {
+        color: white !important;
+        text-decoration: none !important;
+    }
+
+    .contact-number:hover,
+    .contact-number:visited,
+    .contact-number:active {
+        color: white !important;
+        text-decoration: none !important;
+    }*/
+}
